@@ -1,10 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Nav = (logo,add) => {
+const Nav = (add) => {
+
+  console.log(
+    "add : " + add
+  );
+
   return (
     <div className="list-books-title">
-        <img src={logo} alt="logo" />
             <Link
                 to="/search"
                 className="link-new-books"

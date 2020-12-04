@@ -9,6 +9,12 @@ class BookShelf extends Component {
 
         const { shelves, books, onChange } = this.props;
 
+        console.log(
+            "books : " + books +
+            "shelves : " + shelves + 
+            "onChange : " + onChange
+        );
+
         const shelvesCondition = [
             {
                 title: 'Currently Reading',

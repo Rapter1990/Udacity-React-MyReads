@@ -8,6 +8,18 @@ class Book extends Component {
         const { imageLinks, title, authors, shelf } = book;
         const imageURL = imageLinks ? imageLinks.thumbnail : "";
 
+
+        console.log(
+            "books : " + book +
+            "shelves : " + shelves + 
+            "onChange : " + onChange +
+            "imageLinks : " + imageLinks +
+            "title : " + title +
+            "authors : " + authors +
+            "shelf : " + shelf +
+            "imageURL : " + imageURL
+        );
+
         return (
             <li key={book.id}>
                 <div className="book">

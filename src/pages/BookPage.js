@@ -24,7 +24,7 @@ class BooksApp extends React.Component {
     }
 
     changeBookStatus = (book, shelf) => {
-
+      console.log("book : " + book +  + ", shelf: " +shelf)
     }
  
     render() {
