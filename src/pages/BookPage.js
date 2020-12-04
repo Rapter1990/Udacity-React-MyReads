@@ -1,11 +1,10 @@
 import React from 'react'
-import * as BooksAPI from './BooksAPI'
-import './App.css'
-import Nav from './components/Nav'
-import BookShelf from './BookShelf'
-import add from './icons/add.svg'
+import * as BooksAPI from '../api/BooksAPI'
+import Nav from '../components/Nav'
+import BookShelf from '../components/BookShelf'
+import add from '../icons/add.svg'
 
-class BooksApp extends React.Component {
+class BooksPage extends React.Component {
     
     state = {
       books: []
@@ -37,4 +36,4 @@ class BooksApp extends React.Component {
     }
   }
   
-export default BooksApp;
+export default BooksPage;

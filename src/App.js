@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import BooksPage from './pages/BookPage'
 
 class BooksApp extends React.Component {
   state = {
@@ -19,7 +20,7 @@ class BooksApp extends React.Component {
       <div className="app">
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" component={BooksApp}/>  
+            <Route exact path="/" component={BooksPage}/>  
           </Switch>
         </BrowserRouter>
       </div>
