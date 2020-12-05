@@ -10,19 +10,18 @@ class Book extends Component {
 
 
         console.log(
-            "books : " + book +
+            "book : " + book +
             "shelves : " + shelves + 
             "onChange : " + onChange +
             "imageLinks : " + imageLinks +
             "title : " + title +
             "authors : " + authors +
             "shelf : " + shelf +
-            "imageURL : " + imageURL +
-            "book id : " + book.id
+            "imageURL : " + imageURL
         );
 
         return (
-            <li key={book.id}>
+            <li id={book.id}>
                 <div className="book">
                     <div className="book-top">
                         <div className="book-cover" style={{

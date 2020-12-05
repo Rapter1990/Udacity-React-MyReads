@@ -11,7 +11,7 @@ const WantToRead = ({ books, shelves, onChange, title, filter }) => {
     "filter : " + filter
   );
 
-  const currentReading = books.filter((book) => {
+  const wantToRead = books.filter((book) => {
     return book.shelf === filter
   })
 
@@ -20,7 +20,7 @@ const WantToRead = ({ books, shelves, onChange, title, filter }) => {
       <h2 className="bookshelf-title">{title}</h2>
       <div className="bookshelf-books">
         <ol className="books-grid">
-          {currentReading.map((book) => (
+          {wantToRead.map((book) => (
               <Book
                   book={book}
                   shelves={shelves}
