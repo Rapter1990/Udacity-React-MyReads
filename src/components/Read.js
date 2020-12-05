@@ -22,6 +22,7 @@ const WantToRead = ({ books, shelves, onChange, title, filter }) => {
         <ol className="books-grid">
           {readBook.map((book) => (
               <Book
+                  key={book.id}
                   book={book}
                   shelves={shelves}
                   onChange={onChange}

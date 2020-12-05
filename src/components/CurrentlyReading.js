@@ -22,6 +22,7 @@ const CurrentlyReading = ({ books, shelves, onChange, title, filter }) => {
         <ol className="books-grid">
           {currentReading.map((book) => (
               <Book
+                  key={book.id}
                   book={book}
                   shelves={shelves}
                   onChange={onChange}

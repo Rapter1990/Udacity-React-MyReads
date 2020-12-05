@@ -4,7 +4,7 @@ class Book extends Component {
 
     render() {
 
-        const { book, shelves, onChange } = this.props;
+        const { book, shelves, onChange} = this.props;
         const { imageLinks, title, authors, shelf } = book;
         const imageURL = imageLinks ? imageLinks.thumbnail : "";
 
@@ -17,11 +17,12 @@ class Book extends Component {
             "title : " + title +
             "authors : " + authors +
             "shelf : " + shelf +
-            "imageURL : " + imageURL
+            "imageURL : " + imageURL +
+            "book id :" + book.id
         );
 
         return (
-            <li id={book.id}>
+            <li key={book.id}>
                 <div className="book">
                     <div className="book-top">
                         <div className="book-cover" style={{
