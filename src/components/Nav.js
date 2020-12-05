@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
-const Nav = (add) => {
+const Nav = ({add}) => {
 
   console.log(
     "add : " + add
@@ -9,15 +8,7 @@ const Nav = (add) => {
 
   return (
     <div className="list-books-title">
-            <Link
-                to="/search"
-                className="link-new-books"
-            >
-                <div className="new-books">
-                    <img src={add} alt="add" />
-                        <h1>Search new books</h1>
-                </div>
-            </Link>
+        <h1>MyReads</h1>
     </div>
   )
 }

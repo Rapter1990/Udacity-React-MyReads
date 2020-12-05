@@ -2,7 +2,7 @@ import React from 'react'
 import * as BooksAPI from '../api/BooksAPI'
 import Nav from '../components/Nav'
 import BookShelf from '../components/BookShelf'
-import add from '../icons/add.svg'
+import OpenSearch from '../components/OpenSearch'
 
 class BooksPage extends React.Component {
     
@@ -29,8 +29,9 @@ class BooksPage extends React.Component {
     render() {
       return (
         <div className="list-books">
-          <Nav add={add}/>
-          <BookShelf shelves={this.shelves} books={this.state.books} onChange={this.changeBookStatus}/>
+          <Nav />
+          <BookShelf shelves={this.shelves} books={this.state.books} onChange={this.changeBookStatus} />
+          <OpenSearch/>
         </div>
       )
     }

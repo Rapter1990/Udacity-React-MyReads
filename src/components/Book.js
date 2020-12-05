@@ -17,7 +17,8 @@ class Book extends Component {
             "title : " + title +
             "authors : " + authors +
             "shelf : " + shelf +
-            "imageURL : " + imageURL
+            "imageURL : " + imageURL +
+            "book id : " + book.id
         );
 
         return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import Book from './Book'
 
-const WantToRead = (books, shelves , onChange, title, filter) => {
+const WantToRead = ({ books, shelves, onChange, title, filter }) => {
 
   console.log(
     "books : " + books +
