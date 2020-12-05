@@ -10,16 +10,9 @@ class Book extends Component {
 
 
         console.log(
-            "book : " + book +
-            "shelves : " + shelves + 
-            "onChange : " + onChange +
-            "imageLinks : " + imageLinks +
-            "title : " + title +
-            "authors : " + authors +
-            "shelf : " + shelf +
-            "imageURL : " + imageURL +
-            "book id :" + book.id
-        );
+            "Book | shelves : " + shelves + 
+            "onChange : " + onChange
+          );
 
         return (
             <li key={book.id}>
@@ -30,7 +23,7 @@ class Book extends Component {
                             backgroundImage: `url(${imageURL})`
                         }}></div>
                         <div className="book-shelf-changer">
-                            <select value={shelf} onChange={onChange}>
+                            <select value={shelf} onChange={(e) => onChange(book, e)}> 
                                 <option value="move" disabled>Move to...</option>
                                 {Object.entries(shelves).map(([shelfKey, displayName], index) => (
                                 <option key={index} value={shelfKey}>

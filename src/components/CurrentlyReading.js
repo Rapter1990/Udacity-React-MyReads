@@ -4,11 +4,8 @@ import Book from './Book'
 const CurrentlyReading = ({ books, shelves, onChange, title, filter }) => {
 
   console.log(
-    "books : " + books +
-    "shelves : " + shelves + 
-    "onChange : " + onChange +
-    "title  : " + title +
-    "filter : " + filter
+    "CurrentlyReading | shelves : " + shelves + 
+    "onChange : " + onChange
   );
 
   const currentReading = books.filter((book) => {

@@ -4,11 +4,8 @@ import Book from './Book'
 const WantToRead = ({ books, shelves, onChange, title, filter }) => {
 
   console.log(
-    "books : " + books +
-    "shelves : " + shelves + 
-    "onChange : " + onChange +
-    "title  : " + title +
-    "filter : " + filter
+    "WantToRead | shelves : " + shelves + 
+    "onChange : " + onChange
   );
 
   const wantToRead = books.filter((book) => {

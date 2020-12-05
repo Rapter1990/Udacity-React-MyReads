@@ -1,14 +1,11 @@
 import React from 'react'
 import Book from './Book'
 
-const WantToRead = ({ books, shelves, onChange, title, filter }) => {
+const Read = ({ books, shelves, onChange, title, filter }) => {
 
   console.log(
-    "books : " + books +
-    "shelves : " + shelves + 
-    "onChange : " + onChange +
-    "title  : " + title +
-    "filter : " + filter
+    "Read | shelves : " + shelves + 
+    "onChange : " + onChange
   );
 
   const readBook = books.filter((book) => {
@@ -35,4 +32,4 @@ const WantToRead = ({ books, shelves, onChange, title, filter }) => {
   )
 }
 
-export default WantToRead;
+export default Read;
