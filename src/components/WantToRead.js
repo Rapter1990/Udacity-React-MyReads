@@ -36,7 +36,7 @@ const WantToRead = ({ books, shelves, onChange, title, filter }) => {
 WantToRead.propTypes = {
   books: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
-  flter: PropTypes.string.isRequired,
+  filter: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   shelves: PropTypes.object.isRequired
 };
