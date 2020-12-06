@@ -1,5 +1,6 @@
 import React from 'react'
 import Book from './Book'
+import PropTypes from 'prop-types';
 
 const CurrentlyReading = ({ books, shelves, onChange, title, filter }) => {
 
@@ -31,5 +32,13 @@ const CurrentlyReading = ({ books, shelves, onChange, title, filter }) => {
     </div>
   )
 }
+
+CurrentlyReading.propTypes = {
+  books: PropTypes.array.isRequired,
+  title: PropTypes.string.isRequired,
+  flter: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  shelves: PropTypes.object.isRequired
+};
 
 export default CurrentlyReading;
