@@ -10,9 +10,9 @@ class BookShelf extends Component {
         const { shelves, books, onChange } = this.props;
 
         console.log(
-            "books : " + books +
-            "shelves : " + shelves + 
-            "onChange : " + onChange
+            "books : " , books ,
+            "shelves : " , shelves , 
+            "onChange : " , onChange
         );
 
         const shelvesCondition = [
@@ -37,7 +37,7 @@ class BookShelf extends Component {
                     books={books}
                     title={shelvesCondition[0].title}
                     shelves = {shelves}
-                    onChange = {onChange}
+                    onChange = {onChange} 
                     filter = {shelvesCondition[0].shelf}
                 />
                 <WantToRead 

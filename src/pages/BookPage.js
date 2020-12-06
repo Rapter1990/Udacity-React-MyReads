@@ -22,8 +22,12 @@ class BooksPage extends React.Component {
         });
     }
 
-    changeBookStatus = (book, shelf) => {
-      console.log("book : " + book + ", shelf: " + shelf)
+    changeBookStatus = (book, e) => {
+
+      let bookInfo = book;
+      let shelfValue = e.target.value
+
+      console.log('book : ', bookInfo , ', shelf: ', shelfValue);
     }
  
     render() {
