@@ -24,10 +24,30 @@ class BooksPage extends React.Component {
 
     changeBookStatus = (book, e) => {
 
-      let bookInfo = book;
-      let shelfValue = e.target.value
+      let newShelfValue = e.target.value;
 
-      console.log('book : ', bookInfo , ', shelf: ', shelfValue);
+      this.setState((previousState) => {
+        BooksAPI.update(book, newShelfValue).then(response => {
+
+          // update shelf state of new updated book
+          book.shelf = newShelfValue;
+
+          // other books without new updated book
+          const updateBooks = previousState.books.filter((b) => b.id !== book.id)
+
+          // add new updated book to list
+          updateBooks.push(book)
+  
+          // update state
+          this.setState({
+            books: updateBooks
+          })
+  
+        })
+      })
+
+      console.log("changeBookStatus : ", this.state.books);
+      
     }
  
     render() {
