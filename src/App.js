@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import BooksPage from './pages/BookPage'
+import SearchBook from './pages/SearchBook'
 
 class BooksApp extends React.Component {
   state = {
@@ -20,7 +21,8 @@ class BooksApp extends React.Component {
       <div className="app">
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" component={BooksPage}/>  
+            <Route exact path="/" component={BooksPage}/>
+            <Route path="/search" component={SearchBook}/>  
           </Switch>
         </BrowserRouter>
       </div>
