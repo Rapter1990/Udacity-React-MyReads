@@ -4,10 +4,6 @@ import PropTypes from 'prop-types';
 
 const Read = ({ books, shelves, onChange, title, filter }) => {
 
-  console.log(
-    "Read | shelves : " , shelves , 
-    "onChange : " , onChange
-  );
 
   const readBook = books.filter((book) => {
     return book.shelf === filter

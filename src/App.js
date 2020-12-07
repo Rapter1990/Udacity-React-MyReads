@@ -46,8 +46,6 @@ class BooksApp extends React.Component {
 
       })
     })
-
-    console.log("changeBookStatus : ", this.state.books);
     
   }
 
