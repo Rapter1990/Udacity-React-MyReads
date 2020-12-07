@@ -34,7 +34,6 @@ class SearchBook extends Component {
   searchBookHandle = async (e) => {
 
     let searchQuery = e.target.value;
-    searchQuery = searchQuery.trim()
 
     try{
       
