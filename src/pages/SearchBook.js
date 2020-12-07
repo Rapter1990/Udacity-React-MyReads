@@ -27,8 +27,6 @@ class SearchBook extends Component {
       return book;
     })
 
-    console.log("searchResultwithShelf | bookList : " ,bookList);
-
     return bookList;
 
   }
@@ -38,18 +36,19 @@ class SearchBook extends Component {
     let searchQuery = e.target.value;
     searchQuery = searchQuery.trim()
 
-    console.log("searchBookHandle | first check : searchQuery : " , searchQuery)
     try{
         this.setState({
           searchQueryText: searchQuery,
           invalidQuery: false
         })
 
-        console.log("searchBookHandle | second check : searchQuery : " , searchQuery)
 
         if (searchQuery === '') {
-          console.log("searchBookHandle | third check : searchQuery : " , searchQuery)
-          this.setState({ searchQueryText: '', bookList: [] })
+          this.setState({ 
+            searchQueryText: '', 
+            bookList: [] ,
+            invalidQuery: false
+          })
         } else {
 
           await BooksAPI.search(searchQuery).then((searchResult) => {
@@ -57,6 +56,8 @@ class SearchBook extends Component {
               this.setState(() => ({
                 bookList: this.searchResultwithShelf(searchResult, this.props.books),
               }));
+            } else {
+              this.setState({ bookList: [] })
             }
           });
 
