@@ -37,6 +37,7 @@ class SearchBook extends Component {
     searchQuery = searchQuery.trim()
 
     try{
+      
         this.setState({
           searchQueryText: searchQuery,
           invalidQuery: false
