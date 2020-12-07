@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 
 class SearchBook extends Component {
     render() {
+
+      const { shelves, books, changeBookStatus } = this.props;
+
         return (
             <div className="search-books">
             <div className="search-books-bar">
