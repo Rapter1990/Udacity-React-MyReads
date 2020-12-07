@@ -49,7 +49,7 @@ class SearchBook extends Component {
 
         if (searchQuery === '') {
           console.log("searchBookHandle | third check : searchQuery : " , searchQuery)
-          this.setState({ searchQueryText: '', booksToDisplay: [] })
+          this.setState({ searchQueryText: '', bookList: [] })
         } else {
 
           await BooksAPI.search(searchQuery).then((searchResult) => {
@@ -60,16 +60,18 @@ class SearchBook extends Component {
             }
           });
 
-          if ((this.state.bookList.length === undefined && this.state.bookList.length === 0)) {
+
+          if ((this.state.bookList.length === undefined || this.state.bookList.length === 0)) {
             this.setState({
               invalidQuery: true
             })
           }
+
         }
 
     } catch (err) {
 
-      this.setState({ booksToDisplay: [] })
+      this.setState({ bookList: [] })
     }
   }
 
