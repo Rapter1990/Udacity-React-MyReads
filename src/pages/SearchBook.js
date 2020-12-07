@@ -35,20 +35,21 @@ class SearchBook extends Component {
 
     let searchQuery = e.target.value;
 
+    this.setState({
+      searchQueryText: searchQuery,
+      invalidQuery: false
+    })
+
     try{
       
-        this.setState({
-          searchQueryText: searchQuery,
-          invalidQuery: false
-        })
-
-
         if (searchQuery === '') {
+
           this.setState({ 
             searchQueryText: '', 
             bookList: [] ,
             invalidQuery: false
           })
+
         } else {
 
           await BooksAPI.search(searchQuery).then((searchResult) => {
@@ -73,6 +74,7 @@ class SearchBook extends Component {
     } catch (err) {
 
       this.setState({ bookList: [] })
+      
     }
   }
 
