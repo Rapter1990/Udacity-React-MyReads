@@ -10,8 +10,9 @@ class BookDetail extends Component {
     
     componentDidMount() {
         const { bookId } = this.props;
+
         BooksAPI.get(bookId).then((book) => {
-            this.setState({ book })
+            this.setState({ book: book })
         });
     }
 
@@ -21,12 +22,15 @@ class BookDetail extends Component {
         const { book } = this.state;
 
         console.log("book : ", book);
-
-        return (
-            <div>
-                <p>{book.title}</p>
-            </div>
-        )
+        if (!book) 
+            return null;
+        else {
+            return (
+                <div>
+                    <p>{book.title}</p>
+                </div>
+            )
+        }    
     }
 }
 
