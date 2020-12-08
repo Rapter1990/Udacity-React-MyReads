@@ -20,9 +20,11 @@ class BookDetail extends Component {
 
         const { book } = this.state;
 
+        console.log("book : ", book);
+
         return (
             <div>
-                
+                <p>{book.title}</p>
             </div>
         )
     }

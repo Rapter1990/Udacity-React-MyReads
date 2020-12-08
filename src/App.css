@@ -203,3 +203,9 @@ button:active {
   margin: 10px;
   padding: 50px;
 }
+
+.book-detail-link {
+  height: 193px;
+  width: 128px;
+  display: block;
+}

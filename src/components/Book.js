@@ -23,7 +23,7 @@ class Book extends Component {
                             width: 128, height: 193,
                             backgroundImage: `url(${imageURL})`
                         }}>
-                        <Link to={`book/${book.id}`}></Link>    
+                        <Link className="book-detail-link" to={`book/${book.id}`}></Link>    
                         </div>
                         <div className="book-shelf-changer">
                             <select value={shelf} onChange={(e) => onChange(book, e)}> 
