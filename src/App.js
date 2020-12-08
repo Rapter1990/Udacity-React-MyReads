@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import BooksPage from './pages/BookPage'
 import SearchBook from './pages/SearchBook'
 import * as BooksAPI from './api/BooksAPI'
+import BookDetail from './components/BookDetail'
 
 class BooksApp extends React.Component {
   
@@ -72,7 +73,14 @@ class BooksApp extends React.Component {
                                       changeBookStatus={this.changeBookStatus}
                                     />
                           )}
-            />  
+            />
+            <Route
+                path="/book/:bookId"
+                render={props => {
+                  const { bookId } = props.match.params;
+                  return <BookDetail bookId={bookId} />;
+                }}>
+            </Route>  
           </Switch>
         </BrowserRouter>
       </div>

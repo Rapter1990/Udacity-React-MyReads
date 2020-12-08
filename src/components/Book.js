@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class Book extends Component {
 
@@ -21,7 +22,9 @@ class Book extends Component {
                         <div className="book-cover" style={{
                             width: 128, height: 193,
                             backgroundImage: `url(${imageURL})`
-                        }}></div>
+                        }}>
+                        <Link to={`book/${book.id}`}></Link>    
+                        </div>
                         <div className="book-shelf-changer">
                             <select value={shelf} onChange={(e) => onChange(book, e)}> 
                                 <option value="move" disabled>Move to...</option>
