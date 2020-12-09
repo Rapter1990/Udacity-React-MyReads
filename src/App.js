@@ -16,6 +16,7 @@ class BooksApp extends React.Component {
       currentlyReading: "Currently Reading",
       wantToRead: "Want to read",
       read: "Read",
+      none: "None"
   };
 
   componentDidMount() {
