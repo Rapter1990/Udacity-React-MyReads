@@ -26,7 +26,7 @@ class Book extends Component {
                         <Link className="book-detail-link" to={`book/${book.id}`}></Link>    
                         </div>
                         <div className="book-shelf-changer">
-                            <select value={shelf} onChange={(e) => onChange(book, e)}> 
+                            <select value={shelf || 'none'} onChange={(e) => onChange(book, e)}> 
                                 <option value="move" disabled>Move to...</option>
                                 {Object.entries(shelves).map(([shelfKey, displayName], index) => (
                                 <option key={index} value={shelfKey}>
