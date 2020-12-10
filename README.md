@@ -96,10 +96,10 @@ For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
 <details>
 <summary>Click here to show the screenshoots of project</summary>
     <div>
-    <img src='/screenshots/screenshot1.PNG'>
+    <img src='screenshots/screenshot1.PNG'>
     <br>
-    <img src='/screenshots/screenshot2.PNG'>
+    <img src='screenshots/screenshot2.PNG'>
     <br>
-    <img src='/screenshots/screenshot3.PNG'>
+    <img src='screenshots/screenshot3.PNG'>
     </div>
 </details>
